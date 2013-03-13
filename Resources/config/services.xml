@@ -24,4 +24,10 @@
         </service>
     </services>
 
+    <services>
+        <service id="twig.extension.spawlowski" class="Gajdaw\TwigExtBundle\Twig\SpawlowskiExtension">
+            <tag name="twig.extension" />
+        </service>
+    </services>
+
 </container>
