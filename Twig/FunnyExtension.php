@@ -45,7 +45,7 @@ class FunnyExtension extends \Twig_Extension
 
     public function smileFunction($number = 5)
     {
-        return str_repeat(':-)', $number);
+        return str_repeat(':)', $number);
     }
 
     public function copyrightFunction()
