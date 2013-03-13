@@ -20,12 +20,18 @@ class FunnyExtension extends \Twig_Extension
         return array(
             'removespaces' => new \Twig_Filter_Method($this, 'removespacesFilter'),
             'funny' => new \Twig_Filter_Method($this, 'funnyFilter'),
+            'oa' => new \Twig_Filter_Method($this, 'oaFilter'),
         );
     }
 
     public function funnyFilter($text)
     {
         return str_replace('l', 'XXX', $text);
+    }
+
+    public function oaFilter($text)
+    {
+        return $text . " almost dodget rocket";
     }
 
     public function getFunctions()
