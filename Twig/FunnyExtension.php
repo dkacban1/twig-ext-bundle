@@ -39,12 +39,18 @@ class FunnyExtension extends \Twig_Extension
         return array(
             'dots' => new \Twig_Function_Method($this, 'dotsFunction'),
             'smile' => new \Twig_Function_Method($this, 'smileFunction'),
+            'copyright' => new \Twig_Function_Method($this, 'copyrightFunction'),
         );
     }
 
     public function smileFunction($number = 5)
     {
         return str_repeat(':-)', $number);
+    }
+
+    public function copyrightFunction()
+    {
+        return '&copy;';
     }
 
     public function getName()
